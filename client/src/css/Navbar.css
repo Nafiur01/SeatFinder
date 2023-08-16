@@ -1,31 +1,99 @@
 .navbar {
-    background-color: #1f1f1f;
-    padding: 5px 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-logo {
+  width: 150px; /* Updated width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add spacing between logo and links */
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6c5ce7;
+}
+
+.custom-button {
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-outline-light.custom-button {
+  border-color: white;
+  color: white;
+}
+
+
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    display: none; /* Hide the links on small screens */
   }
-  
-  .navbar-brand {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-left: 10px;
-    
-  }
-  
-  .navbar-nav .nav-link {
-    color: #c0c0c0;
-    font-size: 1rem;
+  .d-lg-none .navbar-nav {
+    display: flex; /* Display the links below navbar on small screens */
+    flex-direction: column;
     text-align: center;
-    margin: 0 10px;
-    border-radius: 10px;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  
-  .navbar-nav .nav-link:hover {
-    color: #fff;
-    background-color: #6a5acd; /* Purplish background color */
-  }
-  
-  .navbar-toggler-icon {
-    border: none;
-    background-color: #fff;
-  }
+}
+
+
+.sf-btn {
+  font-weight:bold;
+  border: none;
+  padding: 8px 16px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background-color: #5a0052;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.sf-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Navbar.css */
+.sf-link {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.sf-link:hover {
+  background: linear-gradient(45deg, #f06, #fc0);
+  background-size: 400% 400%;
+  animation: sfLinkAnimation 4s linear infinite;
+  color: #fff;
+}
+
+@keyframes sfLinkAnimation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 10% 50%; }
+}
+
