@@ -1,4 +1,4 @@
-# SeatFinder - Micro Event Ticket Booking System
+# SeatFinder - Micro Event Ticket Booking
 
 SeatFinder is a micro event ticket booking system developed using Django and React. It simplifies the process of event ticket booking, offering a wide range of features to enhance user experience and event management.
 

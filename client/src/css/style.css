@@ -3,18 +3,18 @@
 body {
     font-family: 'Overpass', sans-serif !important;
     font-size: 15px !important;
-    background: linear-gradient(52deg, #5a0052, #002958);
-    background-attachment: fixed; /* Keep the background fixed while scrolling */
-    background-size: 100% 100%; /* Cover the full display */
-    animation: AnimationName 26s linear infinite alternate;
+    background: linear-gradient(45deg, #5a0052, #002958);
+    background-attachment: fixed; 
+    background-size: 100% 100%; 
+    animation: bgAnimate 10s linear infinite alternate;
   }
   
-  @keyframes AnimationName {
+  @keyframes bgAnimate {
     0% {
       background-position: 0% 0%;
     }
     100% {
-      background-position: 100% 100%;
+      background-position: 50% 100%;
     }
   }
   
