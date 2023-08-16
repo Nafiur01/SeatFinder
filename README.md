@@ -81,6 +81,11 @@ This project is licensed under the MIT License.
 
 ## Dev Team
 
-For any inquiries, please contact your-email@example.com.
+- [Rajieb Rojarieo](https://github.com/tesla1618)
+- [Mumtahina Ahmed](https://github.com/remesis)
+- [Nafiur Rahman](https://github.com/Nafiur01)
+- [Golam Rabbani Abir](https://github.com/Abir0606)
 
-Happy event discovery and ticket booking!
+
+Initialized with pain by `FTS`
+
