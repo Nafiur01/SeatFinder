@@ -52,8 +52,14 @@ class Event(models.Model):
     host = models.CharField(max_length=500)
     # thumb = models.ImageField(upload_to='thumbnail/', null=True, blank=True)
     thumb = models.ImageField(upload_to=event_thumbnail_path, null=True, blank=True)
-    isCompleted = models.BooleanField(default=False)
+    # isCompleted = models.BooleanField(default=False)
     # images = models.ManyToManyField(EventImage, blank=True)
+    @property
+    def isCompleted(self):
+        if timezone.now() > self.date:
+            return True
+        return False
+
 
     def clean(self):
         if self.isPrivate and not self.pkey:
@@ -76,11 +82,6 @@ def create_event_folder(sender, instance, created, **kwargs):
         folder_path = os.path.join('static', 'images', 'img', instance.link)
         os.makedirs(folder_path, exist_ok=True)
 
-@receiver(post_save, sender=Event)
-def update_is_completed(sender, instance, **kwargs):
-    if instance.date <= timezone.now():
-        instance.isCompleted = True
-        instance.save(update_fields=['isCompleted'])
 
 class Userprofile(models.Model):
     user = models.OneToOneField(User,primary_key=True,verbose_name='user',related_name='profile',on_delete= models.CASCADE)
