@@ -1,38 +1,39 @@
-.terms-container {
+.pcontainer {
     max-width: 800px;
     margin: 30px auto;
     padding: 30px;
-    background-color: white;
+    color: #e1e1e1;
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: justify;
   }
 
 @media (max-width: 768px) {
-    .terms-container {
-      margin: 20px;
+    .pcontainer {
+      margin: 12px;
       padding: 20px;
     }
   }
   
   h1 {
-    color: #5a0052;
+    color: #b70eb4;
     font-size: 24px; /* Updated font size for h1 and h2 */
   }
 
   h2 {
-    color: #5a0052;
+    color: #b70eb4;
     font-size: 20px; /* Updated font size for h1 and h2 */
   }
   
   p {
-    color: #444;
+    color: #e1e1e1;
     line-height: 1.6;
     font-size: 16px; /* Default font size for paragraphs */
   }
   
   h2 {
     margin-top: 20px;
-    color: #5a0052;
+    color: #b70eb4;
   }
   

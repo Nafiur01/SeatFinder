@@ -160,6 +160,12 @@
   animation: sfLinkAnimation 4s linear infinite;
   color: #fff;
 }
+.sf-link.active {
+  background: linear-gradient(45deg, #f06, #fc0);
+  background-size: 400% 400%;
+  animation: sfLinkAnimation 4s linear infinite;
+  color: #fff;
+}
 
 @keyframes sfLinkAnimation {
   0% {

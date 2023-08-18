@@ -6,8 +6,8 @@ const TermsOfService = () => {
   return (
     <>
     <Navbar/>
-    <div className="terms-container">
-      <h1>Terms of Service</h1>
+    <div className="pcontainer">
+      <h1 className=' mb-4 mt-3'>Terms of Service</h1>
       <p>
         Welcome to SeatFinder! These terms and conditions outline the rules and regulations for using our platform. By accessing or using SeatFinder, you agree to comply with and be bound by these terms. If you do not agree with any part of these terms, please refrain from using our platform.
       </p>

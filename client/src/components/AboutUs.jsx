@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div className="about-us-page">
       <Navbar />
-      <div className="terms-container">
+      <div className="pcontainer">
         <h1 className="about-us-heading mb-4 mt-3">About SeatFinder</h1>
         Welcome to SeatFinder - Your Ultimate Event Management Solution!
 

@@ -23,12 +23,10 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="d-flex align-items-center ms-auto">
-            <a className="sf-link" href="#login">
-              Login
-            </a> <b className='text-white'>/</b> 
-            <a className="sf-link" href="#signup">
-              Signup
-            </a>
+            <NavLink className={({isActive}) => isActive ? "sf-link active" : "sf-link"} exact to="/login">Login</NavLink>
+            <i className='text-white'>/</i>
+            <NavLink className="sf-link" to="/signup">Signup</NavLink>
+            
           </div>
         </div>
       </nav>
