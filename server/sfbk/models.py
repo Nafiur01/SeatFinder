@@ -5,6 +5,7 @@ from django.dispatch import receiver
 from django.utils.text import slugify
 import os
 from django.core.exceptions import ValidationError
+from django.contrib.auth.models import User,AnonymousUser 
 
 # Create your models here.
 
@@ -80,5 +81,19 @@ def update_is_completed(sender, instance, **kwargs):
     if instance.date <= timezone.now():
         instance.isCompleted = True
         instance.save(update_fields=['isCompleted'])
+
+class Userprofile(models.Model):
+    user = models.OneToOneField(User,primary_key=True,verbose_name='user',related_name='profile',on_delete= models.CASCADE)
+    phone = models.CharField(max_length=11,null=True,blank=True)
+    email = models.CharField(max_length=50,null=True,blank=True)
+    avatar = models.ImageField(upload_to='avatar/')
+
+    def __str__(self):
+        return self.user.username
+
+
+
+    
+
 
 
