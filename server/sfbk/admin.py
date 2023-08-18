@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Event
+from .models import *
 
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('id', 'host', 'name', 'description', 'date', 'location', 'city', 'capacity', 'isPrivate', 'pkey', 'hasFee', 'entry_fee', 'link', )
+    list_display = ('name', 'description', 'link', 'date', 'location', 'city', 'capacity', 'isPrivate', 'pkey', 'hasFee', 'entry_fee', 'host', 'thumb', 'isCompleted')
 # Register your models here.
 
 admin.site.register(Event, EventAdmin)
+admin.site.register(EventImage)
