@@ -27,6 +27,7 @@ router.register(r'events', views.EventViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/images/', views.image_list_api, name='image_list_api'),
 
 ]
 

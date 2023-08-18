@@ -1,31 +1,48 @@
 import React from 'react'
 import Navbar from './Navbar'
 import '../css/page.css';
+import '../css/LoginPage.css';
 
 
 function LoginPage() {
   return (
     <>
         <Navbar />
-    <div className='pcontainer'>
-        <h1 className=' mb-4 mt-3'>Login</h1>
-        <form>
-            <div className="mb-3">
-                <label for="exampleInputEmail1" className="form-label">Email address</label>
-                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+    <div className='container mt-5 login-pc-block'>
+        <div className="row">
+            <div className="col-md-5 col-12">
+                <img src="/assets/images/login-banner.png" alt="" width="500"/>
             </div>
-            <div className="mb-3">
-                <label for="exampleInputPassword1" className="form-label">Password</label>
-                <input type="password" className="form-control" id="exampleInputPassword1"/>
+            <div className="col-md-5 col-12 pcontainer login-pc-v">
+                <form className="login-form">
+                    <div class="info-box" role="alert">
+                        Welcome back! Please enter your credentials to log in.
+                    </div>
+                    <input type="text" className="login-field" placeholder="Username" />
+                    <input type="password" className="login-field" placeholder="Password" />
+                    <button type="submit" className="login-button">Login</button>
+                </form>
             </div>
-            <div className="mb-3 form-check">
-                <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                <label className="form-check-label" for="exampleCheck1">Remember Me</label>
-            </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+        </div>
       
+    </div>
+
+    <div className='login-mbl-block'>
+
+        <div className="col-md-5 col-12 pcontainer login-pc-v">
+            <form className="login-form">
+                <div class="info-box" role="alert">
+                    Welcome back! Please enter your credentials to log in.
+                </div>
+                <input type="text" className="login-field" placeholder="Username" />
+                <input type="password" className="login-field" placeholder="Password" />
+                <button type="submit" className="login-button">Login</button>
+            </form>
+            <div className="text-white mt-4">
+                New to SeatFinder? <a className='text-white' href="/signup">Create an account</a>
+            </div>
+        </div>
+
     </div>
     
     </>
