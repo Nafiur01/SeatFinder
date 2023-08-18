@@ -2,12 +2,21 @@
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 5px !important;
 }
 
 .navbar-logo {
   width: 150px; /* Updated width */
   height: auto; /* Maintain aspect ratio */
   margin-right: 20px; /* Add spacing between logo and links */
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    width: 130px; /* Updated width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Add spacing between logo and links */
+  }
 }
 
 .navbar-brand {
@@ -74,8 +83,8 @@
 /* Navbar.css */
 .sf-link {
   display: inline-block;
-  margin: 0 5px;
-  padding: 10px 20px;
+  margin: 0 1px;
+  padding: 6px 13px;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
