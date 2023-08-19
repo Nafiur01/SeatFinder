@@ -82,6 +82,18 @@ def create_event_folder(sender, instance, created, **kwargs):
         folder_path = os.path.join('static', 'images', 'img', instance.link)
         os.makedirs(folder_path, exist_ok=True)
 
+class EventSpeaker(models.Model):
+    event = models.ForeignKey('Event', on_delete=models.CASCADE)
+    speaker = models.CharField(max_length=100, null=True, blank=True)
+    dp = models.ImageField(upload_to='')
+
+    def upload_to_path(instance, filename):
+        return os.path.join('img', instance.event.link, 'speakers', filename)
+
+    dp.upload_to = upload_to_path
+
+    def __str__(self):
+        return f"Speakers for {self.event.name}"
 
 class Userprofile(models.Model):
     user = models.OneToOneField(User,primary_key=True,verbose_name='user',related_name='profile',on_delete= models.CASCADE)
