@@ -21,10 +21,19 @@
       padding: 20px;
     }
   }
+
+  .text-yellow {
+    color: #b2b6ff;
+  }
+
   
   h1 {
     color: #b70eb4;
     font-size: 24px; /* Updated font size for h1 and h2 */
+  }
+
+  .text-purple {
+    color: #b70eb4;
   }
 
   h2 {

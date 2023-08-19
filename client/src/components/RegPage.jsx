@@ -36,7 +36,7 @@ function RegPage() {
                     <input type="text" className="login-field" placeholder="Username" />
                     <input type="text" className="login-field" placeholder="Phone Number" />
                     <input type="password" className="login-field" placeholder="Password" />
-                    <div className={({isChecked}) => !isChecked ? "checkbox-error mt-3 mb-2" : "text-start mt-3 mb-2"}>
+                    <div className="text-start mt-3 mb-3">
                     <input checked={isChecked} onChange={handleCheckboxChange} type="checkbox" name="" id=""/> <i className='mx-2'>I am aware of the <Link className='text-white' to="/terms"> Terms and Conditions</Link></i>
                     </div>
                     <button type="submit" className="login-button" disabled={!isChecked}>Sign up</button>
@@ -60,7 +60,7 @@ function RegPage() {
                     <input type="text" className="login-field" placeholder="Username" />
                     <input type="text" className="login-field" placeholder="Phone Number" />
                     <input type="password" className="login-field" placeholder="Password" />
-                    <div className="text-start mt-3 mb-2 ">
+                    <div className="text-start mt-3 mb-3 ">
                     <input type="checkbox" name="" id="" className='mr-5'/> <i className='mx-2'>I am aware of the <Link className='text-white' to="/terms"> Terms and Conditions</Link></i>
                     </div>
                     <button type="submit" className="login-button">Sign up</button>

@@ -25,7 +25,19 @@ const EventPage = ({ events }) => {
           <img src={selectedEvent.thumb} alt={selectedEvent.name} />
         </div>
         <div className="event-info mt-3">
-          <h2 className="event-name">{selectedEvent.name}</h2>
+          <h2 className="event-name text-yellow">{selectedEvent.name}</h2>
+          </div>
+          <div className="event-info">
+            <i className="bi bi-geo-alt"></i>
+            <span>{selectedEvent.location}</span>
+          </div>
+          <div className="event-info">
+            <i className="bi bi-calendar"></i>
+            <span>{selectedEvent.date}</span>
+          </div>
+          <div className="event-info">
+            <i className="bi bi-people"></i>
+            <span>at most <b className='text-purple'>{selectedEvent.capacity}</b> can attend</span>
           </div>
         <div className="event-info">
             <p className='mt-3 mb-3'>

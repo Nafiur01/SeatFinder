@@ -40,7 +40,7 @@ class EventImage(models.Model):
 class Event(models.Model):
     name = models.CharField(max_length=1000)
     description = models.TextField()
-    link = models.CharField(max_length=100)
+    link = models.CharField(max_length=100, unique=True)
     date = models.DateTimeField()
     location = models.CharField(max_length=500)
     city = models.CharField(max_length=50)
