@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Layout from "./Layout";
 import "../css/page.css";
 
 const AboutUs = () => {
   return (
+    <Layout>
     <div className="about-us-page">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="pcontainer">
         <h1 className="about-us-heading mb-4 mt-3">About SeatFinder</h1>
         Welcome to SeatFinder - Your Ultimate Event Management Solution!
@@ -172,6 +174,7 @@ Whether you're an event organizer or an enthusiastic attendee, SeatFinder invite
         opportunity to create lasting memories and meaningful connections.
       </div>
     </div>
+    </Layout>
   );
 };
 

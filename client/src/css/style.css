@@ -1,5 +1,11 @@
 /* global.css */
 
+#root {
+  min-height: 100%;
+  position: relative;
+}
+
+
 @keyframes bgAnimate {
   0% {
     background-size: 100% 100%;
@@ -60,3 +66,14 @@ body {
   }
 
   
+
+  .slide-fade-in {
+    opacity: 0;
+    transform: translateY(10px); /* Start from below the viewport */
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  }
+  
+  .slide-fade-in.active {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }

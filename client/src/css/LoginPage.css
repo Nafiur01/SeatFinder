@@ -1,13 +1,21 @@
 
-login-mbl-block {
-    display: none !important;
-}
 
-@media (max-width: 767px) {
+/* login-mbl-block {
+    display: none !important;
+} */
+
+.text-start{
+    text-align: left !important;
+}
+.mbl-container {
+    min-height: 80vh;
+}
+@media (max-width: 768px) {
   .login-mbl-block {
     display: block;
-    max-width: fit-content;
+    max-width: 100%;
     padding: 10px 0px 10px 0px;
+    margin: 10px 0;
   }
   .login-pc-block {
     display: none;

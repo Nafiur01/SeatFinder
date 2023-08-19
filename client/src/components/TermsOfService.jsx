@@ -1,11 +1,12 @@
 import React from "react";
 import "../css/page.css";
 import Navbar from "./Navbar";
+import Layout from "./Layout";
 
 const TermsOfService = () => {
   return (
     <>
-    <Navbar/>
+    <Layout>
     <div className="pcontainer">
       <h1 className=' mb-4 mt-3'>Terms of Service</h1>
       <p>
@@ -100,6 +101,7 @@ const TermsOfService = () => {
           experience with SeatFinder!
         </p>
       </div>
+      </Layout>
     </>
   );
 };

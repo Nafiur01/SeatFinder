@@ -1,36 +1,68 @@
 import React from 'react'
 import Navbar from './Navbar'
+import '../css/page.css';
+import '../css/style.css';
+import '../css/LoginPage.css';
+import Layout from './Layout';
+import { Link } from 'react-router-dom';
+
 
 function RegPage() {
   return (
     <>
-        <Navbar />
-        <div className='pcontainer'>
+        <Layout>
+    <div className='container mt-3 mb-3 login-pc-block'>
+        <div className="row">
+            <div className="col-md-5 col-12">
+                <img src="/assets/images/reg-banner.png" alt="" width="500"/>
+            </div>
+            <div className="col-md-5 col-12 pcontainer login-pc-v">
+                <form className="login-form">
+                    {/* <div class="info-box" role="alert">
+                        Welcome back! Please enter your credentials to log in.
+                    </div> */}
 
-            <h1 className=' mb-4 mt-3'>Registration</h1>
-            <form>
-                <div className="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" />
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone
-                        else.</div>
+                    <input type="email" className="login-field" placeholder="Email" />
+                    <input type="text" className="login-field" placeholder="Username" />
+                    <input type="text" className="login-field" placeholder="Phone Number" />
+                    <input type="password" className="login-field" placeholder="Password" />
+                    <div className="text-start mt-3 mb-2 ">
+                    <input type="checkbox" name="" id="" className='mr-5'/> <i className='mx-2'>I am aware of the <Link className='text-white' to="/terms"> Terms and Conditions</Link></i>
+                    </div>
+                    <button type="submit" className="login-button">Sign up</button>
+                </form>
+                <div className="text-white mt-4">
+                    Already have an Account? <Link className='text-white' to="/login">Sign in</Link>
                 </div>
-                <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control"
-                        id="exampleInputPassword1" />
+            </div>
+        </div>
+      
+    </div>
+
+    <div className='mbl-container login-mbl-block'>
+
+        <div className="pcontainer login-pc-v">
+            <form className="login-form">
+                <div class="info-box" role="alert">
+                    Welcome back! Please enter your credentials to log in.
                 </div>
-                <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Confirm Password</label>
-                    <input type="password" className="form-control"
-                        id="exampleInputPassword1" />
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <input type="email" className="login-field" placeholder="Email" />
+                    <input type="text" className="login-field" placeholder="Username" />
+                    <input type="text" className="login-field" placeholder="Phone Number" />
+                    <input type="password" className="login-field" placeholder="Password" />
+                    <div className="text-start mt-3 mb-2 ">
+                    <input type="checkbox" name="" id="" className='mr-5'/> <i className='mx-2'>I am aware of the <Link className='text-white' to="/terms"> Terms and Conditions</Link></i>
+                    </div>
+                    <button type="submit" className="login-button">Sign up</button>
             </form>
-        
+            <div className="text-white mt-4">
+                Already have an Account? <Link className='text-white' to="/login">Sign in</Link>
+            </div>
         </div>
 
+    </div>
+    </Layout>
+    
     </>
   )
 }
