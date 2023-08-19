@@ -24,7 +24,7 @@ function RegPage() {
     <div className='container mt-3 mb-3 login-pc-block'>
         <div className="row">
             <div className="col-md-5 col-12">
-                <img src="/assets/images/reg-banner.png" alt="" width="500"/>
+                <img className='danceImg' src="/assets/images/reg-banner.png" alt="" width="500"/>
             </div>
             <div className="col-md-5 col-12 pcontainer login-pc-v">
                 <form className="login-form">

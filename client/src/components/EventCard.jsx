@@ -12,8 +12,9 @@ const truncateText = (text, maxLength) => {
 
 const EventCard = ({ imageSrc, title, location, date, entryFee, guests, buyTicketLink, eventID }) => {
   const truncatedTitle = truncateText(title, 30);
+  const ticketIcon = <i className="bi bi-ticket"></i>;
   return (
-    <div className="event-card">
+    <div className="event-card danceCard">
       <div className="event-card-image">
         <img src={imageSrc} alt={title} />
       </div>
@@ -30,11 +31,11 @@ const EventCard = ({ imageSrc, title, location, date, entryFee, guests, buyTicke
           </div>
           { entryFee ? (<div className="event-info">
             <i className="bi bi-currency-dollar"></i>
-            <span>{entryFee}</span>
+            <span>{entryFee} BDT</span>
           </div>) : (
             <div className="event-info">
             <i className="bi bi-currency-dollar"></i>
-            <span>Freeof Cost</span>
+            <span>Free of Cost</span>
           </div>
           )}
           
@@ -43,7 +44,7 @@ const EventCard = ({ imageSrc, title, location, date, entryFee, guests, buyTicke
             <span>{guests}</span>
           </div>
         </div>
-        <Link key={eventID} to={buyTicketLink} className="btn btn-primary">
+        <Link key={eventID} to={buyTicketLink} className="btn btn-gradient">
           {entryFee ? 'Buy Ticket' : 'Register'}
         </Link>
       </div>

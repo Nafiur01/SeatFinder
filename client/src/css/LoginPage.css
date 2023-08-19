@@ -99,3 +99,18 @@ input[type="password"]{
 input[type="email"]{
     color: #e1e1e1
 }
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.danceImg {
+  
+  position: relative;
+  animation: moveUpDown 2s ease-in-out infinite;
+}

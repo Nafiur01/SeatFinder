@@ -6,7 +6,17 @@
     width: 300px; /* Adjust as needed */
     color: white;
     height: 500px;
+    margin-top: 5px;
     flex-direction: column; /* Display children in a column */
+  }
+
+  .danceCard {
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .danceCard:hover {
+    transform: translateY(-6px);
   }
   
   .event-card-grid {
@@ -63,10 +73,12 @@
     margin-right: 10px;
   }
   
-  .btn-primary {
-    background-color: #007bff;
+  .btn-gradient {
+    background: linear-gradient(72deg, #211644, #15393b);
     color: white;
     border: none;
+    background-size: 300% 300%;
+    animation: btnGradient 3s ease infinite;
     padding: 8px 16px;
     border-radius: 4px;
     text-align: center;
@@ -74,5 +86,26 @@
     display: inline-block;
     font-size: 14px;
     cursor: pointer;
+    
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(72deg, #0a6166, #211644);
+    background-size: 400% 400%;
+    animation: btnGradient 4s ease infinite;
+    color: white;
+    transition: background 0.3s easse-in-out;
+  }
+
+  @keyframes btnGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
   

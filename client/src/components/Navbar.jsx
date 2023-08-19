@@ -24,7 +24,7 @@ const Navbar = () => {
           </div>
           <div className="d-flex align-items-center ms-auto">
             <NavLink className={({isActive}) => isActive ? "sf-link active" : "sf-link"} exact to="/login">Login</NavLink>
-            <i className='text-white'>/</i>
+            {/* <i className='text-white'>/</i> */}
             <NavLink className="sf-link" to="/signup">Signup</NavLink>
             
           </div>

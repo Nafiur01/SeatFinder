@@ -161,17 +161,26 @@
   color: #fff;
 }
 .sf-link.active {
-  background: linear-gradient(45deg, rgb(55, 0, 255), #fc0);
-  background-size: 400% 400%;
-  animation: sfLinkAnimation 4s linear infinite;
-  color: #fff;
+  background: linear-gradient(300deg, #443572, #3d7148);
+  background-size: 1000% 1000%;
+
+  -webkit-animation: sfLinkAnimated 8s ease infinite;
+  -moz-animation: sfLinkAnimated 8s ease infinite;
+  animation: sfLinkAnimated 8s ease infinite;
 }
 
-@keyframes sfLinkAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 10% 50%;
-  }
+@-webkit-keyframes sfLinkAnimated {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+@-moz-keyframes sfLinkAnimated {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+@keyframes sfLinkAnimated {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
 }

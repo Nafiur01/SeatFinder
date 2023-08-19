@@ -8,6 +8,7 @@ import LoginPage from './components/LoginPage';
 import RegPage from './components/RegPage';
 import EventPage from './components/EventPage';
 import axios from 'axios';
+import CreateEvent from './components/CreateEvent';
 
 class AppRouter extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ render() {
             </Route>
             <Route path="/login" element={<LoginPage/>} />
             <Route path="/signup" element={<RegPage/>} />
+            <Route path="/create" element={<CreateEvent/>} />
             <Route path="/:eventLink" element={<EventPage events={this.state.eventData} />} />
         </Routes>
         

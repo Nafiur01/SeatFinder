@@ -20,12 +20,13 @@ const EventPage = ({ events }) => {
   const formattedDescription = selectedEvent.description.replace(/\n/g, '<br>');
   return (
     <Layout>
-      <div className="pcontainer event-details">
+      <div className="pcontainer">
+        <div className="event-details">
         <div className="event-thumbnail">
           <img src={selectedEvent.thumb} alt={selectedEvent.name} />
         </div>
         <div className="event-info mt-3">
-          <h2 className="event-name text-yellow">{selectedEvent.name}</h2>
+          <span className="text-yellow">{selectedEvent.name}</span>
           </div>
           <div className="event-info">
             <i className="bi bi-geo-alt"></i>
@@ -37,7 +38,10 @@ const EventPage = ({ events }) => {
           </div>
           <div className="event-info">
             <i className="bi bi-people"></i>
-            <span>at most <b className='text-purple'>{selectedEvent.capacity}</b> can attend</span>
+            <span>at most <spanText className='sm bg-indigo bold rounded'>{selectedEvent.capacity}</spanText> can attend</span>
+          </div>
+          <div className='mt-5 mb-1'>
+          <spanText className='s17 bg-purple p8'>More About This Event</spanText>
           </div>
         <div className="event-info">
             <p className='mt-3 mb-3'>
@@ -63,6 +67,7 @@ const EventPage = ({ events }) => {
               <strong>Date:</strong> {selectedEvent.date}
             </li>
           </ul>
+        </div>
         </div>
       </div>
     </Layout>
