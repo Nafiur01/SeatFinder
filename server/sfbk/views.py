@@ -11,6 +11,7 @@ import os
 class EventViewSet(viewsets.ModelViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
+    ordering = ['-date']
 
 
 

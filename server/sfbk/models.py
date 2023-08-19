@@ -48,7 +48,7 @@ class Event(models.Model):
     isPrivate = models.BooleanField(default=False)
     pkey = models.CharField(max_length=32, blank=True)
     hasFee = models.BooleanField(default=True)
-    entry_fee = models.IntegerField(null=True, blank=True)
+    entryFee = models.IntegerField(null=True, blank=True)
     host = models.CharField(max_length=500)
     # thumb = models.ImageField(upload_to='thumbnail/', null=True, blank=True)
     thumb = models.ImageField(upload_to=event_thumbnail_path, null=True, blank=True)
@@ -65,7 +65,7 @@ class Event(models.Model):
         if self.isPrivate and not self.pkey:
             raise ValidationError({'pkey': 'pkey is required when isPrivate is selected'})
 
-        if self.hasFee and self.entry_fee is None:
+        if self.hasFee and self.entryFee is None:
             raise ValidationError({'entry_fee': 'entry_fee is required when hasFee is selected'})
 
     def save(self, *args, **kwargs):
