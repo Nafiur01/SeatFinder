@@ -37,7 +37,7 @@
 }
 
 .navbar-nav .nav-link::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -64,7 +64,7 @@
 }
 
 .nav-link-mbl::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -155,13 +155,13 @@
 }
 
 .sf-link:hover {
-  background: linear-gradient(45deg, #f06, #fc0);
+  background: linear-gradient(45deg, rgb(29, 21, 53), rgb(109, 0, 67));
   background-size: 400% 400%;
   animation: sfLinkAnimation 4s linear infinite;
   color: #fff;
 }
 .sf-link.active {
-  background: linear-gradient(45deg, #f06, #fc0);
+  background: linear-gradient(45deg, rgb(55, 0, 255), #fc0);
   background-size: 400% 400%;
   animation: sfLinkAnimation 4s linear infinite;
   color: #fff;
