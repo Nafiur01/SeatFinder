@@ -4,7 +4,7 @@ import '../css/Footer.css';
 function Footer() {
   return (
     <div className='footer'>
-      FTS
+      Crafted with Pain and Suffering by <i class="bi bi-heartbreak-fill mx-2"></i> <b>FTS</b>
     </div>
   )
 }
