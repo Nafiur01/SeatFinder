@@ -16,18 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from sfbk import views
+from sfbk.views import *
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
-router.register(r'events', views.EventViewSet)
+router.register(r'events', EventViewSet)
+router.register(r'speakers', EventSpeakerViewSet)  # Create a custom viewset for EventSpeaker
+router.register(r'images', EventImageViewSet)  
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/images/', views.image_list_api, name='image_list_api'),
+    path('api/events/<int:event_id>/speakers/', event_speakers_list, name='event_speakers_list'),
+    path('api/events/<int:event_id>/images/', event_images_list, name='event_images_list'),
+    # path('api/images/', views.image_list_api, name='image_list_api'),
 
 ]
 

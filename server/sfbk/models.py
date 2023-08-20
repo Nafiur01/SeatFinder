@@ -54,6 +54,7 @@ class Event(models.Model):
     thumb = models.ImageField(upload_to=event_thumbnail_path, null=True, blank=True)
     # isCompleted = models.BooleanField(default=False)
     # images = models.ManyToManyField(EventImage, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     @property
     def isCompleted(self):
         if timezone.now() > self.date:
@@ -84,7 +85,7 @@ def create_event_folder(sender, instance, created, **kwargs):
 
 class EventSpeaker(models.Model):
     event = models.ForeignKey('Event', on_delete=models.CASCADE)
-    speaker = models.CharField(max_length=100, null=True, blank=True)
+    name = models.CharField(max_length=100, null=True, blank=True)
     dp = models.ImageField(upload_to='')
 
     def upload_to_path(instance, filename):
