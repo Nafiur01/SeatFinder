@@ -12,9 +12,16 @@ class EventSpeakerSerializer(serializers.ModelSerializer):
         model = EventSpeaker
         fields = '__all__'
 
+class EventAttendanceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EventAttendance
+        fields = '__all__'
+
+
 class EventSerializer(serializers.ModelSerializer):
     images = EventImageSerializer(many=True, read_only=True)
     speakers = EventSpeakerSerializer(many=True, read_only=True)
+    attendees = EventAttendanceSerializer(many=True, read_only=True)
     class Meta:
         model = Event
         fields = '__all__'

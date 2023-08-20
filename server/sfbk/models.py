@@ -106,6 +106,17 @@ class Userprofile(models.Model):
     def __str__(self):
         return self.user.username
 
+class EventAttendance(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    STATUS_CHOICES = (
+        ('registered', 'Registered'),
+        ('interested', 'Interested'),
+    )
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.event.name} - {self.status}"
 
 
     

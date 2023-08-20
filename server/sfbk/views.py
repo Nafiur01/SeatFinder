@@ -15,6 +15,9 @@ class EventViewSet(viewsets.ModelViewSet):
     serializer_class = EventSerializer
     # order = ['-created_at']
 
+class EventAttendanceViewSet(viewsets.ModelViewSet):
+    queryset = EventAttendance.objects.all()
+    serializer_class = EventAttendanceSerializer
 
 class EventSpeakerViewSet(viewsets.ModelViewSet):
     queryset = EventSpeaker.objects.all()
@@ -42,3 +45,9 @@ def image_list_api(request):
 
     image_urls = [os.path.join(settings.STATIC_URL, 'assets', filename) for filename in image_files]
     return JsonResponse(image_urls, safe=False)
+
+@api_view(['GET'])
+def event_attendances_list(request, event_id):
+    attendances = EventAttendance.objects.filter(event=event_id)
+    serializer = EventAttendanceSerializer(attendances, many=True)
+    return Response(serializer.data)
