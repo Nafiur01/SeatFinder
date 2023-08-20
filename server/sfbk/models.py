@@ -50,6 +50,7 @@ class Event(models.Model):
     hasFee = models.BooleanField(default=True)
     entryFee = models.IntegerField(null=True, blank=True)
     host = models.CharField(max_length=500)
+    tags = models.CharField(max_length=500, null=True, blank=True)
     # thumb = models.ImageField(upload_to='thumbnail/', null=True, blank=True)
     thumb = models.ImageField(upload_to=event_thumbnail_path, null=True, blank=True)
     # isCompleted = models.BooleanField(default=False)

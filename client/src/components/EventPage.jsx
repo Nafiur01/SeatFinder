@@ -15,6 +15,8 @@ import {
 
 const EventPage = ({ events }) => {
 
+  
+
   const truncateText = (text, maxLength) => {
     if (text.length > maxLength) {
       return text.slice(0, maxLength) + '...';
@@ -26,10 +28,14 @@ const EventPage = ({ events }) => {
   const [eventData, setEventData] = useState(null);
   const [eventSpeakers, setEventSpeakers] = useState([]);
   const [eventImages, setEventImages] = useState([]);
-
+  
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
+  console.log(selectedEvent);
+  // const [eTags, seteTags] = useState([]);
+  // const eTags = selectedEvent.tags
 
+//  console.log(eTags);
   const next = () => {
     if (animating) return;
     const nextIndex = activeIndex === eventImages.length - 1 ? 0 : activeIndex + 1;
@@ -88,7 +94,14 @@ const EventPage = ({ events }) => {
       </Layout>
     );
   }
-  
+  let eTags = selectedEvent.tags
+  // let eventTags = [];
+  // {eTags.length > 0 ? (
+  //   eventTags = eTags.split(',')
+  // ) : (
+  //   eventTags = []
+  // ) 
+  // }
   
 
   const formattedDescription = selectedEvent.description.replace(/\n/g, '<br>');
@@ -103,6 +116,24 @@ const EventPage = ({ events }) => {
         <div className="event-info mt-3">
           <span className="text-yellow">{selectedEvent.name}</span>
           </div>
+
+          {eTags && eTags.length > 0 ? (
+    <div className="event-info scrollable mt-2 mb-3">
+      <span className="badge eTagsTitle bg-purple sm rounded-corner mr-2">Event Tags:</span>
+      {eTags.split(',').map((tag, index) => (
+        <span className="badge eTags sm rounded-corner mr-2" key={index}>{tag}</span>
+      ))}
+    </div>
+  ) : (
+    <></>
+  )}
+
+
+
+
+
+
+
           <div className="event-info">
             <i className="bi bi-geo-alt"></i>
             <span>{selectedEvent.location}</span>

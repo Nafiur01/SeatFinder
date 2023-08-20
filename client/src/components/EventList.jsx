@@ -16,6 +16,7 @@ const EventList = ({ events }) => {
           capacity = {event.capacity}
           guests={event.host}
           buyTicketLink={event.link}
+          eTags = {event.tags}
         />
       ))}
     </div>

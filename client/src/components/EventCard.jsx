@@ -10,7 +10,7 @@ const truncateText = (text, maxLength) => {
   return text;
 };
 
-const EventCard = ({ imageSrc, title, location, date, entryFee, guests, buyTicketLink, eventID }) => {
+const EventCard = ({ imageSrc, title, location, date, entryFee, guests, buyTicketLink, eventID, eTags }) => {
   const truncatedTitle = truncateText(title, 30);
   const ticketIcon = <i className="bi bi-ticket"></i>;
   return (
@@ -44,7 +44,7 @@ const EventCard = ({ imageSrc, title, location, date, entryFee, guests, buyTicke
             <span>{guests}</span>
           </div>
         </div>
-        <Link key={eventID} to={buyTicketLink} className="btn btn-gradient">
+        <Link key={eventID} to={buyTicketLink} eTags className="btn btn-gradient">
           {entryFee ? 'Buy Ticket' : 'Register'}
         </Link>
       </div>
