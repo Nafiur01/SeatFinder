@@ -116,7 +116,7 @@ const EventPage = ({ events }) => {
             <span>at most <spanText className='sm bg-indigo bold rounded'>{selectedEvent.capacity}</spanText> can attend</span>
           </div>
           <div className='mt-5 mb-1'>
-          <spanText className='s17 bg-purple p8'>More About This Event</spanText>
+          <spanText className='s17 bg-purple p8 rounded-corner'>More About This Event</spanText>
           </div>
         <div className="event-info">
             <p className='mt-3 mb-3'>
@@ -125,7 +125,7 @@ const EventPage = ({ events }) => {
         </div>
 
         <div className='mt-5 mb-4'>
-          <spanText className='s17 bg-purple p8'>Event Image Gallery</spanText>
+          <spanText className='s17 bg-purple p8 rounded-corner'>Event Image Gallery</spanText>
           </div>
         {eventImages.length > 0 ? (
         <Carousel className='text-center'
@@ -156,7 +156,7 @@ const EventPage = ({ events }) => {
   )}
             
           <div className="event-info">
-          <spanText className='s17 bg-purple p8'>Key People</spanText>
+          <spanText className='s17 bg-purple p8 rounded-corner'>Key People</spanText>
           
             </div>
             <div className="event-info">
@@ -169,8 +169,8 @@ const EventPage = ({ events }) => {
           <div className="speaker-item">
             <img src={`http://192.168.0.106:8000${speaker.dp}`} className='speaker-dp' alt={speakerName} />
           </div>
-          <div className="speaker-item">
-            <span className="speaker-name">{speakerName}</span>
+          <div className="speaker-item text-center speaker-name">
+            <span className="text-center">{speakerName}</span>
           </div>
         </div>
       );

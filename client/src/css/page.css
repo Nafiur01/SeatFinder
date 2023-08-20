@@ -36,6 +36,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
     animation: LeftToRight 1s ease-in-out forwards;
   }
 
@@ -125,6 +126,9 @@
   }
   spanText.glowing{
     animation: glowingText 2s infinite;
+  }
+  spanText.rounded-corner{
+    border-radius: 5px;
   }
 
 
@@ -256,7 +260,7 @@
   
   .speaker-name {
     font-size: 16px;
-    /* font-weight: bold; */
+    
   }
 
   
