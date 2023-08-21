@@ -15,6 +15,8 @@ import {
 
 import { Link } from 'react-router-dom';
 
+import { API_URL } from '../config';
+
 const EventPage = ({ events }) => {
   const truncateText = (text, maxLength) => {
     if (text.length > maxLength) {
@@ -30,7 +32,9 @@ const EventPage = ({ events }) => {
   
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const LOCALHOST = `${API_URL}`
 
+  console.log(`This is Api Url::: ${API_URL}api/events/9/qq`)
   
 
   
@@ -67,7 +71,7 @@ const [registeredUsers, setRegisteredUsers] = useState([]);
         onExited={() => setAnimating(false)}
         key={item.id}
       >
-        <img className='event-image' src={`http://192.168.0.106:8000${item.image}`} />
+        <img className='event-image' src={`${LOCALHOST}${item.image}`} />
         
       </CarouselItem>
     );
@@ -77,7 +81,7 @@ const [registeredUsers, setRegisteredUsers] = useState([]);
   useEffect(() => {
     if (selectedEvent) {
       // Fetch event speakers using selectedEvent.id
-      axios.get(`http://192.168.0.106:8000/api/events/${selectedEvent.id}/speakers/`).then((response) => {
+      axios.get(`${LOCALHOST}/api/events/${selectedEvent.id}/speakers/`).then((response) => {
         setEventSpeakers(response.data);
       });
     }
@@ -86,7 +90,7 @@ const [registeredUsers, setRegisteredUsers] = useState([]);
   useEffect(() => {
     if (selectedEvent) {
       // Fetch event speakers using selectedEvent.id
-      axios.get(`http://192.168.0.106:8000/api/events/${selectedEvent.id}/images/`).then((response) => {
+      axios.get(`${LOCALHOST}/api/events/${selectedEvent.id}/images/`).then((response) => {
         setEventImages(response.data);
       });
     }
@@ -95,7 +99,7 @@ const [registeredUsers, setRegisteredUsers] = useState([]);
   useEffect(() => {
     if (selectedEvent) {
     // Fetch event attendances when the component mounts
-    axios.get(`http://192.168.0.106:8000/api/events/${selectedEvent.id}/attendances/`)
+    axios.get(`${LOCALHOST}/api/events/${selectedEvent.id}/attendances/`)
     .then(response => {
       setRegisteredUsers(response.data);
     })
@@ -246,21 +250,7 @@ const formattedCount = formatRegisteredUsers(registeredUsers.length);
           </div>
           <div className="mt-4 mb-5">
           <div className="container">
-  <div className="row gx-3 justify-content-center">
-
-    <div className="col-lg-4 col-md-12">
-
-    </div>
-
-    <div className="col-lg-4 col-md-6">
-
-    </div>
-
-    <div className="col-lg-4 col-md-6">
-
-    </div>
-
-  </div>
+ 
 </div>
             <div className="inblock">
             <div className="progress-bar" style={circleBar}>
@@ -348,7 +338,7 @@ const formattedCount = formatRegisteredUsers(registeredUsers.length);
                     <div className="speaker-gap" key={speaker.id}>
                       <div className="speaker-item">
                         <img
-                          src={`http://192.168.0.106:8000${speaker.dp}`}
+                          src={`${LOCALHOST}/${speaker.dp}`}
                           className="speaker-dp"
                           alt={speakerName}
                         />
