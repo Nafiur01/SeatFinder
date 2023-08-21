@@ -12,7 +12,13 @@ class EventSpeakerSerializer(serializers.ModelSerializer):
         model = EventSpeaker
         fields = '__all__'
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username')
+
 class EventAttendanceSerializer(serializers.ModelSerializer):
+    user_details = UserSerializer(source='user', read_only=True)
     class Meta:
         model = EventAttendance
         fields = '__all__'
