@@ -50,7 +50,7 @@ To get started with SeatFinder, follow these steps:
 3. Install frontend dependencies:
 
    ```bash
-   cd frontend
+   cd client
    npm install
    ```
 
