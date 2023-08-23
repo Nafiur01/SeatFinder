@@ -11,14 +11,14 @@
 }
 
 .navbar-logo {
-  width: 150px; /* Updated width */
+  width: 110px; /* Updated width */
   height: auto; /* Maintain aspect ratio */
   margin-right: 20px; /* Add spacing between logo and links */
 }
 
 @media (max-width: 768px) {
   .navbar-logo {
-    width: 130px; /* Updated width */
+    width: 95px; /* Updated width */
     height: auto; /* Maintain aspect ratio */
     margin-right: 20px; /* Add spacing between logo and links */
   }
