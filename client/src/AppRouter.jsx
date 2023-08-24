@@ -19,7 +19,7 @@ class AppRouter extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://192.168.0.106:8000/api/events/')
+    axios.get('http://localhost:8000/api/events/')
       .then(response => {
         this.setState({ eventData: response.data });
       })
