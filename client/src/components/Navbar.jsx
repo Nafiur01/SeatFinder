@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-blurry">
         <div className="container">
-          <img src="/seatfinder.png" alt="SeatFinder Logo" className="navbar-logo" />
+          <img src="/inizia.png" alt="SeatFinder Logo" className="navbar-logo" />
           <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">

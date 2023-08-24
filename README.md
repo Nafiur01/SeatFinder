@@ -29,7 +29,7 @@ To get started with SeatFinder, follow these steps:
 
 ### Prerequisites
 
-- Python 3.x
+- Python 3.10 up
 - Node.js
 
 ### Installation
@@ -50,7 +50,7 @@ To get started with SeatFinder, follow these steps:
 3. Install frontend dependencies:
 
    ```bash
-   cd frontend
+   cd client
    npm install
    ```
 

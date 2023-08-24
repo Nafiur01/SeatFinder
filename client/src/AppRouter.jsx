@@ -9,6 +9,9 @@ import RegPage from './components/RegPage';
 import EventPage from './components/EventPage';
 import axios from 'axios';
 import CreateEvent from './components/CreateEvent';
+import { API_URL } from './config';
+
+const LOCALHOST = `${API_URL}`
 
 class AppRouter extends Component {
   constructor(props) {
@@ -19,7 +22,11 @@ class AppRouter extends Component {
   }
 
   componentDidMount() {
+<<<<<<< HEAD
     axios.get('http://localhost:8000/api/events/')
+=======
+    axios.get(`${LOCALHOST}/api/events/`)
+>>>>>>> d006d455af0f59d09e9eefcad23d2f8942765171
       .then(response => {
         this.setState({ eventData: response.data });
       })
